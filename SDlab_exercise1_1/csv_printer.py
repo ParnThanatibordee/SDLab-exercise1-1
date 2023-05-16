@@ -9,4 +9,6 @@ class CSVPrinter:
         with open(self.file_name) as f:
             reader = csv.reader(f)
             lines = [row for row in reader]
-        return lines
+        if (len(lines) > 0):
+            return lines
+        return None
