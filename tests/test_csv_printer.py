@@ -61,4 +61,12 @@ class TestCSVPrinter(unittest.TestCase):
             self.csv_printer.file_name = "invalid.csv"
             l = self.csv_printer.read()
 
+    def test_read4(self):
+        """TestMethod4: CSVPrinter should return None when it receives an input file that is empty"""
+        print('Running test_read4')
+        
+        l = self.csv_printer.read()
+
+        self.assertEqual(len(l), 0)
+
     
