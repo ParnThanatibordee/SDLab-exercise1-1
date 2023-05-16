@@ -59,7 +59,7 @@ class TestCSVPrinter(unittest.TestCase):
         
         with self.assertRaises(FileNotFoundError):
             self.csv_printer.file_name = "invalid.csv"
-            l = self.csv_printer.read()
+            self.csv_printer.read()
 
     def test_read4(self):
         """TestMethod4: CSVPrinter should return None when it receives an input file that is empty"""
